@@ -252,35 +252,6 @@
             </objects>
             <point key="canvasLocation" x="1189.5999999999999" y="115.59220389805098"/>
         </scene>
-        <!--Mapa View Controller-->
-        <scene sceneID="IGQ-Dv-bV1">
-            <objects>
-                <viewController storyboardIdentifier="mapa" id="s7H-r1-igz" customClass="MapaViewController" customModule="Agenda" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SEC-jq-ur8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UIP-7d-4yb">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="UIP-7d-4yb" firstAttribute="leading" secondItem="hZU-T4-Wy8" secondAttribute="leading" id="Qwe-8s-4sp"/>
-                            <constraint firstItem="UIP-7d-4yb" firstAttribute="top" secondItem="hZU-T4-Wy8" secondAttribute="top" id="gXP-e5-HuM"/>
-                            <constraint firstItem="UIP-7d-4yb" firstAttribute="trailing" secondItem="hZU-T4-Wy8" secondAttribute="trailing" id="ji0-HX-D3I"/>
-                            <constraint firstItem="UIP-7d-4yb" firstAttribute="bottom" secondItem="hZU-T4-Wy8" secondAttribute="bottom" id="k0m-12-cKV"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="hZU-T4-Wy8"/>
-                    </view>
-                    <connections>
-                        <outlet property="mapa" destination="UIP-7d-4yb" id="5qm-Fz-B6D"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="70j-PX-U2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1840.8" y="115.59220389805098"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="yXs-rW-FGy">
             <objects>
