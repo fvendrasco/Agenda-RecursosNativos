@@ -20,6 +20,8 @@
 		5F499D5D25A4E07A009D109B /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F499D5C25A4E07A009D109B /* Mensagem.swift */; };
 		5FBB6DB725A4EEBB00D7EC98 /* Localizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB6DB625A4EEBB00D7EC98 /* Localizacao.swift */; };
 		5FBB6DBB25A4F47900D7EC98 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB6DBA25A4F47900D7EC98 /* MapaViewController.swift */; };
+		5FBB6DBE25A5085900D7EC98 /* CalculaMediaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB6DBD25A5085900D7EC98 /* CalculaMediaAPI.swift */; };
+		5FBB6DC025A5132800D7EC98 /* Notificacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB6DBF25A5132800D7EC98 /* Notificacoes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		5F499D5C25A4E07A009D109B /* Mensagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
 		5FBB6DB625A4EEBB00D7EC98 /* Localizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizacao.swift; sourceTree = "<group>"; };
 		5FBB6DBA25A4F47900D7EC98 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		5FBB6DBD25A5085900D7EC98 /* CalculaMediaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculaMediaAPI.swift; sourceTree = "<group>"; };
+		5FBB6DBF25A5132800D7EC98 /* Notificacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificacoes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 		03AA17621FC8433E003CB2B8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5FBB6DBC25A5083500D7EC98 /* Model */,
 				03AA17641FC8433E003CB2B8 /* View */,
 				03AA17631FC8433E003CB2B8 /* Controller */,
 			);
@@ -132,6 +137,7 @@
 				5F499D5A25A4DCB3009D109B /* MenuOpcoesAlunos.swift */,
 				5F499D5C25A4E07A009D109B /* Mensagem.swift */,
 				5FBB6DB625A4EEBB00D7EC98 /* Localizacao.swift */,
+				5FBB6DBF25A5132800D7EC98 /* Notificacoes.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -150,6 +156,14 @@
 				5FBB6DBA25A4F47900D7EC98 /* MapaViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5FBB6DBC25A5083500D7EC98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FBB6DBD25A5085900D7EC98 /* CalculaMediaAPI.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +242,11 @@
 				03AA17661FC84353003CB2B8 /* HomeTableViewController.swift in Sources */,
 				03AA17561FC84154003CB2B8 /* Agenda.xcdatamodeld in Sources */,
 				5F499D5925A4932C009D109B /* ImagePicker.swift in Sources */,
+				5FBB6DBE25A5085900D7EC98 /* CalculaMediaAPI.swift in Sources */,
 				03AA17681FC843B1003CB2B8 /* HomeTableViewCell.swift in Sources */,
 				5F499D5B25A4DCB3009D109B /* MenuOpcoesAlunos.swift in Sources */,
 				5F499D5D25A4E07A009D109B /* Mensagem.swift in Sources */,
+				5FBB6DC025A5132800D7EC98 /* Notificacoes.swift in Sources */,
 				5FBB6DBB25A4F47900D7EC98 /* MapaViewController.swift in Sources */,
 				03AA174E1FC84154003CB2B8 /* AppDelegate.swift in Sources */,
 				5FBB6DB725A4EEBB00D7EC98 /* Localizacao.swift in Sources */,
