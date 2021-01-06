@@ -11,6 +11,10 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDelegate {
+    
+    enum TipoDeSortCut:String {
+        case cadastrarAluno = "CadastrarAluno""
+    }
 
     var window: UIWindow?
 
@@ -44,6 +48,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
         self.saveContext()
     }
 
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        if let tipo = TipoDeSortCut(rawValue: shortcutItem.type){
+            switch tipo{
+            case .cadastrarAluno:
+                let cadastrarAluno = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cadastrar")
+                let navigation = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController
+                navigation?.pushViewController(cadastrarAluno, animated: true)
+                
+                break
+            }
+        }
+    }
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {

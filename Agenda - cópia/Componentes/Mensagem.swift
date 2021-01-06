@@ -2,35 +2,33 @@
 //  Mensagem.swift
 //  Agenda
 //
-//  Created by Felipe Augusto Vendrasco on 05/01/21.
-//  Copyright © 2021 Alura. All rights reserved.
+//  Created by Felipe Augusto Vendrasco on 05/01/2021.
+//  Copyright © 2017 Alura. All rights reserved.
 //
 
 import UIKit
 import MessageUI
 
-class Mensagem: NSObject, MFMailComposeViewControllerDelegate {
-
-    //MARK: - Metodos
+class Mensagem: NSObject, MFMessageComposeViewControllerDelegate {
+    
+    // MARK: - Metodos
     
     func configuraSMS(_ aluno:Aluno) -> MFMessageComposeViewController? {
         if MFMessageComposeViewController.canSendText() {
             let componenteMensagem = MFMessageComposeViewController()
-            guard let numeroDoAluno = aluno.telefone else { return componenteMensagem}
+            guard let numeroDoAluno = aluno.telefone else { return componenteMensagem }
             componenteMensagem.recipients = [numeroDoAluno]
-            componenteMensagem.messageComposeDelegate = self as? MFMessageComposeViewControllerDelegate
+            componenteMensagem.messageComposeDelegate = self
             
-            
-       return componenteMensagem
+            return componenteMensagem
+        }
+        return nil
     }
-    return nil
-}
+        
     
+    // MARK: - MessageComposeDelegate
     
-    
-    //MARK: - MessageComposeDelegate
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         controller.dismiss(animated: true, completion: nil)
     }
 

@@ -2,8 +2,8 @@
 //  ImagePicker.swift
 //  Agenda
 //
-//  Created by Felipe Augusto Vendrasco on 05/01/21.
-//  Copyright © 2021 Alura. All rights reserved.
+//  Created by Felipe Augusto Vendrasco on 05/01/2021.
+//  Copyright © 2017 Alura. All rights reserved.
 //
 
 import UIKit
@@ -13,17 +13,17 @@ enum MenuOpcoes {
     case biblioteca
 }
 
-protocol imagePickerFotoSelecionada {
+protocol ImagePickerFotoSelecionada {
     func imagePickerFotoSelecionada(_ foto:UIImage)
 }
 
 class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-    //MARK: - Atributos
     
-    var delegate: imagePickerFotoSelecionada?
+    // MARK: - Atributos
     
-    //MARK: - Metodos
+    var delegate:ImagePickerFotoSelecionada?
+    
+    // MARK: - Métodos
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let foto = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -31,23 +31,34 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
         picker.dismiss(animated: true, completion: nil)
     }
     
-    func menuOpcoes(complition:@escaping(_ opcao:MenuOpcoes) -> Void) -> UIAlertController{
-        let menu = UIAlertController(title: "Atencao", message: "Escolha uma das opcoes", preferredStyle: .actionSheet)
-        
-        let camera = UIAlertAction(title: " Tirar Foto", style: .default) { (acao) in
-            complition(.camera)
+    func menuDeOpcoes(completion:@escaping(_ opcao:MenuOpcoes) -> Void) -> UIAlertController {
+        let menu = UIAlertController(title: "Atenção", message: "escolha uma das opções abaixo", preferredStyle: .actionSheet)
+        let camera = UIAlertAction(title: "tirar foto", style: .default) { (acao) in
+            completion(.camera)
         }
         menu.addAction(camera)
         
-        let biblioteca = UIAlertAction(title: "Rolo de camera", style: .default) { (acao) in
-            complition(.biblioteca)
+        let biblioteca = UIAlertAction(title: "biblioteca", style: .default) { (acao) in
+            completion(.biblioteca)
         }
         menu.addAction(biblioteca)
         
-        let cancelar = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        let cancelar = UIAlertAction(title: "cancelar", style: .cancel, handler: nil)
         menu.addAction(cancelar)
         
         return menu
-        }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
+}
